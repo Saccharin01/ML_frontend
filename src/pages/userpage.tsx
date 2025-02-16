@@ -47,7 +47,7 @@ const UserPage: React.FC = () => {
     formData.append("img", imageFile); // 이미지 파일 전송
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/result", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/result`, {
         method: "POST",
         body: formData,
       });
